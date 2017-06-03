@@ -7,8 +7,7 @@ import { User } from '../user.interface';
   templateUrl: './model-driven-form.component.html',
   styleUrls: ['./model-driven-form.component.css']
 })
-export class ModelDrivenFormComponent {}
-/*
+
 export class ModelDrivenFormComponent implements OnInit {
     public myForm: FormGroup;
     public submitted: boolean;
@@ -68,4 +67,4 @@ export class ModelDrivenFormComponent implements OnInit {
         this.submitted = true;
         console.log(model, isValid);
     }
-}*/
+}
