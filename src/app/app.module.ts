@@ -6,9 +6,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 const appRoutes: Routes = [
-  { path: 'model-driven', component: ModelDrivenFormComponent }/*,
+  { path: 'model-driven', component: ModelDrivenFormComponent },
+  { path: 'template-driven', component: TemplateDrivenFormComponent }/*,
   { path: 'hero/:id',      component: HeroDetailComponent },
   {
     path: 'heroes',
@@ -25,7 +27,8 @@ const appRoutes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    ModelDrivenFormComponent
+    ModelDrivenFormComponent,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,
