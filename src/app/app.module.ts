@@ -7,9 +7,11 @@ import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { NestedModelDrivenFormComponent } from './nested-model-driven-form/nested-model-driven-form.component';
 
 const appRoutes: Routes = [
   { path: 'model-driven', component: ModelDrivenFormComponent },
+  { path: 'nested-model-driven', component: NestedModelDrivenFormComponent },
   { path: 'template-driven', component: TemplateDrivenFormComponent }/*,
   { path: 'hero/:id',      component: HeroDetailComponent },
   {
@@ -28,7 +30,8 @@ const appRoutes: Routes = [
   declarations: [
     AppComponent,
     ModelDrivenFormComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    NestedModelDrivenFormComponent
   ],
   imports: [
     BrowserModule,
