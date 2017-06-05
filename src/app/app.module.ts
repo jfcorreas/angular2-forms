@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.component';
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { NestedModelDrivenFormComponent } from './nested-model-driven-form/nested-model-driven-form.component';
+import { AddressComponent } from './nested-model-driven-form/address/address.component';
 
 const appRoutes: Routes = [
   { path: 'model-driven', component: ModelDrivenFormComponent },
@@ -31,7 +32,8 @@ const appRoutes: Routes = [
     AppComponent,
     ModelDrivenFormComponent,
     TemplateDrivenFormComponent,
-    NestedModelDrivenFormComponent
+    NestedModelDrivenFormComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
