@@ -20,6 +20,94 @@
       <label for="">Postcode</label>
       <input type="text" class="form-control" formControlName="postcode">
     </div>
+    <!--payment method-->
+    <div>
+        <label>Payment Method</label>
+    </div>
+
+    <div formGroupName="paymentMethod">
+
+        <!--payment method type button-->
+        <div class="row">
+            <div class="col-xs-6">
+                <button type="button" (click)="setPaymentMethodType(PAYMENT_METHOD_TYPE.BANK)">
+                {{ PAYMENT_METHOD_TYPE.BANK }}
+                </button>
+            </div>
+            <div class="col-xs-6">
+                <button type="button" (click)="setPaymentMethodType(PAYMENT_METHOD_TYPE.CARD)">
+                {{ PAYMENT_METHOD_TYPE.CARD }}
+                </button>
+            </div>
+        </div>
+
+        <!--payment method: BANK-->
+        <div *ngIf="myForm.controls.paymentMethod.controls.type.value === PAYMENT_METHOD_TYPE.BANK">
+            <div class="panel-body">
+
+                <!--Bank account no-->
+                <div formGroupName="bank">
+                    <label>Account no.</label>
+                    <input type="text" formControlName="accountNo">
+                    <small *ngIf="!myForm.controls.paymentMethod.controls.bank.controls.accountNo.valid">
+                    Required.
+                    </small>
+                </div>
+
+                <!--Bank routing no-->
+                <div formGroupName="bank">
+                    <label>Routing no.</label>
+                    <input type="text" formControlName="routingNo">
+                    <small *ngIf="!myForm.controls.paymentMethod.controls.bank.controls.routingNo.valid">
+                    Required.
+                    </small>
+                </div>
+
+                <!--Bank account holder-->
+                <div formGroupName="bank">
+                    <label>Name</label>
+                    <input type="text" formControlName="accountHolder">
+                    <small *ngIf="!myForm.controls.paymentMethod.controls.bank.controls.accountHolder.valid">
+                    Required.
+                    </small>
+                </div>
+            </div>
+        </div>
+
+        <!--payment method: CARD-->
+        <div *ngIf="myForm.controls.paymentMethod.controls.type.value === PAYMENT_METHOD_TYPE.CARD">
+            <div class="panel-body">
+
+                <!--Card no-->
+                <div formGroupName="card">
+                    <label>Card no.</label>
+                    <input type="text" formControlName="cardNo">
+                    <small *ngIf="!myForm.controls.paymentMethod.controls.card.controls.cardNo.valid">
+                    Required (Must be valid card number).
+                    </small>
+                </div>
+
+                <!--Card expiry-->
+                <div formGroupName="card">
+                    <label>Expiry</label>
+                    <input type="text" formControlName="expiry">
+                    <small *ngIf="!myForm.controls.paymentMethod.controls.card.controls.expiry.valid" class="text-danger">
+                    Required (Must be in format MM/YY).
+                    </small>
+                </div>
+
+                <!--Card holder-->
+                <div formGroupName="card">
+                    <label>Name</label>
+                    <input type="text" formControlName="cardHolder">
+                    <small *ngIf="!myForm.controls.paymentMethod.controls.card.controls.cardHolder.valid">
+                    Required.
+                    </small>
+                </div>
+
+            </div>
+        </div>
+    </div>    
     <button type="submit" class="btn btn-default">Submit</button>
     <div class="margin-20">
       <div>myForm details:-</div>
