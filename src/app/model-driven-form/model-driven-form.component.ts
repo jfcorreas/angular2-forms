@@ -46,8 +46,8 @@ export class ModelDrivenFormComponent implements OnInit {
 
         this.subscribePaymentTypeChanges();
 
-        this.setPaymentMethodType(this.PAYMENT_METHOD_TYPE.BANK);
 
+        this.setPaymentMethodType(this.PAYMENT_METHOD_TYPE.BANK);
 
         // Update single value
         (<FormControl>this.myForm.controls['name'])
