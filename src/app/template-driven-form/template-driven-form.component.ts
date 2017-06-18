@@ -14,10 +14,14 @@ export class TemplateDrivenFormComponent implements OnInit {
   ngOnInit() {
     this.user = {
       name: '',
-        address: {
+      address: {
          street: '',
          postcode: '8000'
-      }
+      },
+      username: '',
+      email: '',
+      password: '',
+      confirmPassword: ''
     };
   }
 

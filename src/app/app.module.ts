@@ -9,11 +9,13 @@ import { ModelDrivenFormComponent } from './model-driven-form/model-driven-form.
 import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 import { NestedModelDrivenFormComponent } from './nested-model-driven-form/nested-model-driven-form.component';
 import { AddressComponent } from './nested-model-driven-form/address/address.component';
+import { CustomValidatorDirectiveComponent } from './custom-validator-directive/custom-validator-directive.component';
 
 const appRoutes: Routes = [
   { path: 'model-driven', component: ModelDrivenFormComponent },
   { path: 'nested-model-driven', component: NestedModelDrivenFormComponent },
-  { path: 'template-driven', component: TemplateDrivenFormComponent }/*,
+  { path: 'template-driven', component: TemplateDrivenFormComponent },
+  { path: 'custom-validator-directive', component: CustomValidatorDirectiveComponent}/*,
   { path: 'hero/:id',      component: HeroDetailComponent },
   {
     path: 'heroes',
@@ -33,7 +35,8 @@ const appRoutes: Routes = [
     ModelDrivenFormComponent,
     TemplateDrivenFormComponent,
     NestedModelDrivenFormComponent,
-    AddressComponent
+    AddressComponent,
+    CustomValidatorDirectiveComponent
   ],
   imports: [
     BrowserModule,
